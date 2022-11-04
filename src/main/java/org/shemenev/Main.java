@@ -2,6 +2,9 @@ package org.shemenev;
 
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class Main {
 
@@ -20,9 +23,18 @@ public class Main {
             pathToFile = Path.of(args[1]);
         }
 
-        Parser parser = new Parser();
-        System.out.println(parser.parser(pathToFile));
+        Parser parserObj = new Parser();
+        List<String> row = parserObj.parser(pathToFile);
+        System.out.println(parserObj.parser(pathToFile));
+        System.out.println(parserObj.parser(pathToFile).size());
 
-        System.out.println(parser.map.size());
+         CompareWords.divider(row);
+
+        System.out.println(CompareWords.list_1);
+        System.out.println(CompareWords.list_2);
+
+        HashMap<String, String> mapForPairs = CompareWords.compareAllWords(CompareWords.list_1, CompareWords.list_2);
+        System.out.println(mapForPairs);
+
     }
 }
