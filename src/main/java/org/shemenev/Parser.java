@@ -3,8 +3,6 @@ package org.shemenev;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -15,8 +13,6 @@ import java.util.stream.Stream;
  * которые будут сравниваться друг с другом.
  */
 public class Parser {
-
-
 
     public List<String> parser(Path pathToFile) throws IOException {
 
@@ -29,6 +25,5 @@ public class Parser {
             return fileEntry;
         }
     }
-
 
 }
