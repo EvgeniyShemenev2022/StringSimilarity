@@ -95,7 +95,6 @@ public class CompareWords {
                 }
             }
         }
-        System.out.println(onlyPairIndexes); // DIAGNOSTIC
 
         // выявляем одиночные эл-ты внутреннего цикла и добавляем их в map
         if (list_1.size() == list_2.size() || list_1.size() < list_2.size()) {
